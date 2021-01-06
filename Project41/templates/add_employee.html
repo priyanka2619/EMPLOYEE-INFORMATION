@@ -1,0 +1,34 @@
+{% extends 'common.html' %}
+
+{% block pwn %}
+    {% load static %}
+
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <table align="center" style="background-color: aliceblue;text-align: left">
+            <tr>
+                <th style="color: red;font-size: 30px;font-family: Algerian">
+                    Enter Employee Information
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    {{ form }}
+                </th>
+            </tr>
+            <tr>
+                <th style="text-align: right">
+                    <button type="submit" style="background-color: blue;color: white">Save</button>
+                </th>
+            </tr>
+            {% if messages %}
+                {% for x in messages %}
+                    <tr>
+                        <th style="text-align: center;color: red;font-size: 25px">{{ x }}</th>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    </form>
+
+{% endblock %}

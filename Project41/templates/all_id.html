@@ -1,0 +1,37 @@
+{% extends 'common.html' %}
+
+{% block pwn %}
+
+    <table align="center" border="2" width="600px" height="500px">
+        <tr>
+            <th colspan="9" style="text-align: center;background-color: plum;color: beige;font-size: 30px">All Info Related to ID</th>
+        </tr>
+        <tr  style="text-align: center">
+            <th>IDNO</th><td>{{ object.idno }}</td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>NAME</th><td>{{ object.name }}</td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>AGE</th><td>{{ object.age }}</td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>GENDER</th><td>{{ object.gender }}</td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>CONTACT NO</th><th>{{ object.contact_no }}</th>
+        </tr>
+        <tr  style="text-align: center">
+            <th>SALARY</th><td>{{ object.salary }}</td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>PHOTO</th><td><img src="{{ object.photo.url }}"width="70px" height="80px"></td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>ADDRESS</th><td>{{ object.address }}</td>
+        </tr>
+        <tr  style="text-align: center">
+            <th>EMAIL ID</th><td>{{ object.email }}</td>
+        </tr>
+    </table>
+{% endblock %}

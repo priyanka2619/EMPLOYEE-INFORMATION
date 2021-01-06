@@ -1,0 +1,21 @@
+{% extends 'common.html' %}
+
+{% block pwn %}
+    <form method="post">
+        {% csrf_token %}
+        <table align="center" border="0" width="700px" height="700px">
+            <tr>
+                <th colspan="2" style="text-align: center;background-color: black;color: white;font-size: 35px;font-family: Arial">
+                    Update Employee
+                </th>
+            </tr>
+            {{ form }}
+            <tr>
+                <th style="text-align: right">
+                    <button type="submit">Update</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+{% endblock %}
