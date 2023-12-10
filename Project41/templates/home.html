@@ -1,0 +1,21 @@
+{% extends 'common.html' %}
+
+{% block pwn %}
+    {% load static %}
+{#    <table align="center" border="0">#}
+{#        <tr>#}
+{#            <th>#}
+{#                <img src="{% static 'images/employee.jpg' %}" width="500px" height="350px">#}
+{#            </th>#}
+{#            <th width="350px" style="text-align: center;background-color: honeydew;color: mediumorchid;font-family: 'Arial Black';font-size: 30px">Welcome! The world is full of ideas today.If we don't do it somebody else is going to do it.</th>#}
+{#        </tr>#}
+{#    </table>#}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'images/employee.jpg' %}" width="100%" height="70%">
+            </div>
+        </div>
+    </div>
+{% endblock %}

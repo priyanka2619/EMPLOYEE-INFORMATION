@@ -1,0 +1,41 @@
+{% extends 'common.html' %}
+
+{% block pwn %}
+
+        <table align="center" border="2" width="1000px">
+            <tr>
+                <th colspan="10" style="text-align: center;background-color: beige;color: orange;font-size: 35px">
+                    View All Employee's Information
+                </th>
+            </tr>
+            <tr style="text-align: center;background-color: mediumorchid;color: lightyellow">
+                <th>IDNO</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>GENDER</th>
+                <th>CONTACT NO</th>
+                <th>SALARY</th>
+                <th>PHOTO</th>
+                <th>ADDRESS</th>
+                <th>EMAIL ID</th>
+                <th>PASSWORD</th>
+            </tr>
+            {% for x in object_list  %}
+                <tr style="text-align: center">
+                    <th>{{ x.idno }}</th>
+                    <th>{{ x.name }}</th>
+                    <th>{{ x.age }}</th>
+                    <th>{{ x.gender }}</th>
+                    <th>{{ x.contact_no }}</th>
+                    <th>{{ x.salary }}</th>
+                    <th>
+                        <img src="{{ x.photo.url }}" width="60px" height="60px">
+                    </th>
+                    <th width="30px">{{ x.address }}</th>
+                    <th>{{ x.email }}</th>
+                    <th>{{ x.password }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+
+{% endblock %}

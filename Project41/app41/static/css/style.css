@@ -1,0 +1,9 @@
+.container-text{
+    text-align: center;
+    background-color: red;
+    color: mediumorchid;
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace ;
+    font-size: 30px;
+    margin: 30px 30px;
+    padding-top: 40px;
+}
